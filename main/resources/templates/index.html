@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+ <html xmlns:th="http://www.thymeleaf.org">
+ <head th:replace="/fragments/general.html :: headerFiles"> </head>
+ <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+ 
+ <body>
+<header th:insert ="/fragments/general.html:: header"></header>
+<h1> Secure web resources<br> </h1>
+<p> The Java EE application to Manage a Product Catalog <br>
+The functionality includes add new product to the catalog <br>
+Delete an existing selected product from the catalog<br>
+Edit/Update an existing selected product data in the catalog<br>
+Search the catalog for products with given product brand<br>
+Search the catalog for products with given product unit price greater than a given price<br>
+View all products in the catalog</p>
+<h3>Access Link of Admin</h3>
+<a href="/admin/productDataInput" th:href = "@{/admin/productDataInput}">Add a Product</a><br>
+<a href="/admin/editableListOfProducts"  th:href="@{/admin/editableListOfProducts}">Edit A Product</a><br>
+<a href="/admin/deletableListOfProduct" th:href="@{/admin/deletableListOfProduct}">Delete A Product</a><br>
+<h3>Links Access for customer</h3>
+
+<a href="/customer/listOfProducts" th:href = "@{/customer/listOfProducts}">List the Product</a> <br>
+<a href="/customer/productBrandBasedSearch" th:href = "@{/customer/productBrandBasedSearch}">Search Catalog Based on Product Brand</a> <br>
+<a href="/customer/searchProductsAboveGivenPrice" th:href = "@{/customer/searchProductsAboveGivenPrice}">Search Products Above a given Price</a><br>
+<a href="/customer/productCodeBasedSearch" th:href = "@{/customer/productCodeBasedSearch}">Search Products by product code</a>
+
+
+<br>
+<div th:replace="/fragments/general.html :: footer"></div>
+ </body>
+ </html>

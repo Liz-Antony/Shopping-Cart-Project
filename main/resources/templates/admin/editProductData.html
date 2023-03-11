@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/fragments/general.html :: headerFiles"> </head>
+<link rel="stylesheet" type="text/css" href="/styles/main.css" />
+<body>
+<p> Please edit the course data: </p>
+<form action="#" th:action="@{/admin/updateProductData}" th:object="${product}"
+method="post">
+
+<p> Product Code: <input type="text" th:field= "*{productCode}" /></p>
+<p> Product Brand: <input type="text" th:field= "*{productBrand}" /></p>
+<p> QuantityInHand: <input type="text" th:field= "*{quantityInHand}" /></p>
+<p> UnitPrice: <input type="text" th:field= "*{unitPrice}" /></p>
+<p> <input type="submit" value="Submit" /> </p> <br>
+</form>
+<p> <a href="/editableListOfProducts"> Cancel</a> </p>
+<div th:replace="/fragments/general.html :: footer"></div>
+</body>
+</html>

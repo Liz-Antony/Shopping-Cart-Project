@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+ <html xmlns:th="http://www.thymeleaf.org">
+ <head th:replace="/fragments/general.html :: headerFiles"> </head>
+ <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+ 
+ <body>
+<header th:insert ="/fragments/general.html:: header"></header>
+
+<h3>To select the products above certain amount</h3>
+<p>Please enter the unitPrice to Search:</p>
+<form action="/customer/searchProductsAboveGivenPrice" method="post">
+<p>Enter the unit Price: <input type="number" name="unitPrice" /></p>
+<p><input type="submit" value="Submit" /> <br>
+
+<input type= "reset" value="Reset"/></p>
+
+<br>
+
+</form>
+<a href="/index">Cancel</a><br>
+
+
+
+<br>
+<div th:replace="/fragments/general.html :: footer"></div>
+ </body>
+ </html>

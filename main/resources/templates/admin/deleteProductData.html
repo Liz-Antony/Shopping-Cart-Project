@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+ <html xmlns:th= "http://www.thymeleaf.org">
+ <head th:replace="/fragments/general.html :: headerFiles"> </head>
+ <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+ 
+<body>
+<header th:insert="/fragments/general.html:: header"> </header>
+
+<h3> Delete Product outcome: </h3>
+
+<p th:text ="${message}" > </p> <br>
+<p> To go to the home page, please click
+<a href="/index"> Continue </a>
+</p>
+
+<div th:replace="/fragments/general.html :: footer"></div>

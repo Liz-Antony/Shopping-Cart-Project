@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace ="/fragments/general.html :: headerFiles"> </head>
+<link rel="stylesheet" type="text/css" href="/styles/main.css" />
+
+<body>
+<header th:insert="/fragments/general.html :: header"> </header>
+
+<h3> Product data input form</h3>
+<p> Please complete the Product input data form:
+<form action="#" th:action="@{/admin/productDataInput}" th:object="${product}" method="post">
+<p> Product Code: <input type="text" th:field="*{productCode}" /></p>
+<p> Product Brand: <input type="text" th:field="*{productBrand}" /></p>
+<p>Quantity In Hand: <input type="text" th:field="*{quantityInHand}" /></p>
+<p>Product Unit Price: <input type="text" th:field="*{unitPrice}" /></p>
+
+<p><input type="submit" value="Submit" /> <br>
+
+<input type= "reset" value="Reset"/></p>
+</form>
+
+<p> <a href="/index" > Cancel</a>
+</p>
+<div th:replace ="/fragments/general.html:: footer"></div>
+ </body>
+ </html>

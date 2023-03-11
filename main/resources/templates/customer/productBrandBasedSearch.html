@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+ <html xmlns:th="http://www.thymeleaf.org">
+ <head th:replace="/fragments/general.html :: headerFiles"> </head>
+ <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+ 
+ <body>
+<header th:insert ="/fragments/general.html:: header"></header>
+
+<h3>Product Brand Input form</h3>
+<p>Please enter the product brand to Search:</p>
+<form action="/customer/productBrandBasedSearch" method="post">
+<p>Enter the ProductBrand: <input type="text" name="productBrand" /></p>
+<p><input type="submit" value="Submit" /> <br>
+
+<input type= "reset" value="Reset"/></p>
+
+</form>
+
+<a href="/index">Cancel</a><br>
+
+
+
+<br>
+<div th:replace="/fragments/general.html :: footer"></div>
+ </body>
+ </html>
